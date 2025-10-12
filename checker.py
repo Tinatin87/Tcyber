@@ -9,26 +9,29 @@ def check_password(password: str) -> int:
 # როცა პაროლი ცნობილია
     if password in common_passwords:
        print("Password is in a common list. Your password strength is 0")
-       exit()  
+       return score
 
 # სიგრძის მიხედვით ქულები
-    if length >= 8:
-       score += 1
-    if length >= 12:
-       score += 1
-    if length>= 16:
-       score += 1
     if length >= 20:
+       score += 5
+    elif length >= 16:
+       score += 3
+    elif length>= 12:
+       score += 2
+    elif length >= 8:
        score += 1
+    else :
+      print("Password length is too short. Your password strength is 0")
+      return score
 
 # სიმპოლოების მიხედვით ქულები
-    if re.search(r"[a-z]", password):
-      score += 1
-    if re.search(r"[A-Z]", password):
-      score += 2
-    if re.search(r"[0-9]", password):
-       score += 2
     if re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
        score += 5
-    return score
+    elif re.search(r"[0-9]", password):
+       score += 2
+    elif re.search(r"[A-Z]", password):
+      score += 2
+    elif re.search(r"[a-z]", password):
+      score += 1
+      return score
 
