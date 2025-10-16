@@ -2,10 +2,12 @@
 
 def strength_message(score: int) -> str:
     if score <= 3:
-        return "პაროლი სუსტია "
+     return "პაროლი სუსტია "
+    
     elif score <= 6:
-        return "პაროლი საშუალოა "
+     return "პაროლი საშუალოა "
     elif score <= 9:
-        return "პაროლი საკმაოდ კარგია "
+     return "პაროლი საკმაოდ კარგია "
+    
     else:
-        return "პაროლი ძალიან ძლიერია "
+     return "პაროლი ძალიან ძლიერია "

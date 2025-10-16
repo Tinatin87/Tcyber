@@ -12,4 +12,4 @@ def main():
    print(f"Password strength level: {level}")
 
 if __name__=="__main__":
-     main()
+    main()

@@ -33,5 +33,5 @@ def check_password(password: str) -> int:
       score += 2
     elif re.search(r"[a-z]", password):
       score += 1
-      return score
+    return score
 
