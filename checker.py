@@ -10,7 +10,7 @@ def check_password(password: str) -> int:
     if password in common_passwords:
        print("Password is in a common list. Your password strength is 0")
        return score
-
+    
 # სიგრძის მიხედვით ქულები
     if length >= 20:
        score += 5
